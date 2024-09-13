@@ -1,0 +1,11 @@
+.heading {
+    background-color: #405D72;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    margin: 2em;
+}
+.pageh1 {
+    color: #FFF8F3;
+}

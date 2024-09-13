@@ -1,0 +1,13 @@
+.app {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #f7e7dc;
+    align-items: center;
+}
+    
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+}
