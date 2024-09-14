@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.0ba3d5a7.css",
-    "main.js": "/static/js/main.3658877b.js",
-    "static/js/453.d3d39a9b.chunk.js": "/static/js/453.d3d39a9b.chunk.js",
-    "index.html": "/index.html",
-    "static/media/Arrow 1 (2).svg": "/static/media/Arrow 1 (2).8ad97f0fbb003c46febbd003d0292593.svg",
-    "main.0ba3d5a7.css.map": "/static/css/main.0ba3d5a7.css.map",
-    "main.3658877b.js.map": "/static/js/main.3658877b.js.map",
-    "453.d3d39a9b.chunk.js.map": "/static/js/453.d3d39a9b.chunk.js.map"
+    "main.css": "/frontend-test-task/static/css/main.0ba3d5a7.css",
+    "main.js": "/frontend-test-task/static/js/main.1f347718.js",
+    "static/js/453.d3d39a9b.chunk.js": "/frontend-test-task/static/js/453.d3d39a9b.chunk.js",
+    "index.html": "/frontend-test-task/index.html",
+    "static/media/Arrow 1 (2).svg": "/frontend-test-task/static/media/Arrow 1 (2).8ad97f0fbb003c46febbd003d0292593.svg",
+    "main.0ba3d5a7.css.map": "/frontend-test-task/static/css/main.0ba3d5a7.css.map",
+    "main.1f347718.js.map": "/frontend-test-task/static/js/main.1f347718.js.map",
+    "453.d3d39a9b.chunk.js.map": "/frontend-test-task/static/js/453.d3d39a9b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0ba3d5a7.css",
-    "static/js/main.3658877b.js"
+    "static/js/main.1f347718.js"
   ]
 }
