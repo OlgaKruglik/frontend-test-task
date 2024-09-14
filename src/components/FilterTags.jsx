@@ -22,38 +22,38 @@ function FilterTags({ filterTags = [], addFilterTag, removeFilterTag }) {
             }
             };
 
-        useEffect(() => {
-document.addEventListener('mousedown', handleClickOutside);
-return () => {
-document.removeEventListener('mousedown', handleClickOutside);
-};
-}, []);
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
 
     return (
         <div className={styles.filterTags}>
-        <div
-        className={styles.filterComponent}
-        onClick={() => setDropdownVisible(!isDropdownVisible)}
-        >
-        <p>tags</p>
-        <img src={images} alt='Example' className={styles.image} />
+            <div
+                className={styles.filterComponent}
+                onClick={() => setDropdownVisible(!isDropdownVisible)}
+            >
+                <p>tags</p>
+                <img src={images} alt='Example' className={styles.image} />
+            </div>
+            {isDropdownVisible && (
+                <div className={styles.dropdown} ref={dropdownRef}>
+                    {tags.map((tag) => (
+                        <button
+                            key={tag}
+                            className={`${styles.tagButton} ${filterTags.includes(tag) ? styles.activeTag : ''}`}
+                            onClick={() => handleTagClick(tag)}
+                            >
+                            {tag}
+                        </button>
+                    ))}
+                </div>
+            )}
+            <p onClick={() => filterTags.forEach(tag => removeFilterTag(tag))}>reset rules</p>
         </div>
-        {isDropdownVisible && (
-        <div className={styles.dropdown} ref={dropdownRef}>
-        {tags.map((tag) => (
-        <button
-        key={tag}
-        className={`${styles.tagButton} ${filterTags.includes(tag) ? styles.activeTag : ''}`}
-        onClick={() => handleTagClick(tag)}
-        >
-        {tag}
-        </button>
-        ))}
-        </div>
-        )}
-        <p onClick={() => filterTags.forEach(tag => removeFilterTag(tag))}>reset rules</p>
-        </div>
-        );
-        }
+    );
+}
 
 export default FilterTags
