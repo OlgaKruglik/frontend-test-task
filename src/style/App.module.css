@@ -2,12 +2,21 @@
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    background-color: #f7e7dc;
     align-items: center;
+    justify-content: center;
+    width: 926px;
+    margin: 0 auto;
+    background-color: #F7E7DC;
+    gap: 0.5rem;
+    padding-top: 30px;
 }
     
 .title {
     font-size: 2rem;
     font-weight: 700;
+}
+.filter{
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }

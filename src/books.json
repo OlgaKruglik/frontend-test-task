@@ -1,0 +1,142 @@
+[
+    {
+    "title": "Plastic: A Novel",
+    "author": "Scott Guild",
+    "date": "February 2024",
+    "price": "420",
+    "tags": ["Climate change", "Sci-Fi"]
+    },
+    {
+    "title": "The Last Forest",
+    "author": "Emily Green",
+    "date": "March 2023",
+    "price": "350",
+    "tags": ["Environment", "Adventure"]
+    },
+    {
+    "title": "Future Tides",
+    "author": "James Ocean",
+    "date": "January 2025",
+    "price": "480",
+    "tags": ["Sci-Fi", "Thriller"]
+    },
+    {
+    "title": "Solar Winds",
+    "author": "Laura Sun",
+    "date": "July 2022",
+    "price": "390",
+    "tags": ["Sci-Fi", "Space"]
+    },
+    {
+    "title": "Green Horizon",
+    "author": "Michael Leaf",
+    "date": "October 2023",
+    "price": "410",
+    "tags": ["Environment", "Drama"]
+    },
+    {
+    "title": "Digital Dreams",
+    "author": "Anna Byte",
+    "date": "May 2024",
+    "price": "450",
+    "tags": ["Tech", "Sci-Fi"]
+    },
+    {
+    "title": "Echoes of Earth",
+    "author": "David Stone",
+    "date": "August 2023",
+    "price": "370",
+    "tags": ["Environment", "Mystery"]
+    },
+    {
+    "title": "Quantum Leap",
+    "author": "Sophia Wave",
+    "date": "December 2024",
+    "price": "460",
+    "tags": ["Sci-Fi", "Physics"]
+    },
+    {
+    "title": "Biohackers",
+    "author": "Tom Gene",
+    "date": "April 2023",
+    "price": "430",
+    "tags": ["Tech", "Thriller"]
+    },
+    {
+    "title": "Arctic Shadows",
+    "author": "Nina Frost",
+    "date": "November 2022",
+    "price": "400",
+    "tags": ["Adventure", "Mystery"]
+    },
+    {
+    "title": "Rising Seas",
+    "author": "Linda Waters",
+    "date": "June 2023",
+    "price": "380",
+    "tags": ["Climate change", "Non-fiction"]
+    },
+    {
+    "title": "Ancient Empires",
+    "author": "John History",
+    "date": "September 2022",
+    "price": "420",
+    "tags": ["History", "Non-fiction"]
+    },
+    {
+    "title": "Health Revolution",
+    "author": "Sarah Wellness",
+    "date": "January 2024",
+    "price": "450",
+    "tags": ["Health", "Wellness"]
+    },
+    {
+    "title": "Tech Giants",
+    "author": "Mark Innovate",
+    "date": "March 2023",
+    "price": "470",
+    "tags": ["Technology", "Business"]
+    },
+    {
+    "title": "Bio Breakthroughs",
+    "author": "Dr. Gene",
+    "date": "May 2024",
+    "price": "490",
+    "tags": ["Biochemistry", "Science"]
+    },
+    {
+    "title": "Climate Warriors",
+    "author": "Paul Green",
+    "date": "April 2023",
+    "price": "400",
+    "tags": ["Climate change", "Biography"]
+    },
+    {
+    "title": "World Wars",
+    "author": "Alice History",
+    "date": "November 2022",
+    "price": "430",
+    "tags": ["History", "War"]
+    },
+    {
+    "title": "Healthy Living",
+    "author": "Dr. Health",
+    "date": "July 2023",
+    "price": "380",
+    "tags": ["Health", "Lifestyle"]
+    },
+    {
+    "title": "Future Tech",
+    "author": "Jane Innovate",
+    "date": "August 2024",
+    "price": "460",
+    "tags": ["Technology", "Innovation"]
+    },
+    {
+    "title": "Genetic Frontiers",
+    "author": "Dr. Bio",
+    "date": "February 2023",
+    "price": "480",
+    "tags": ["Biochemistry", "Research"]
+    }
+    ]
