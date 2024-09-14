@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import useBooks from '../hooks/useBooks'
 import useSort from '../hooks/useSort';
+import useFilter from '../hooks/useFilter';
+import FilterTags from '../components/FilterTags';
 import Filter from '../components/filter';
 import styles from '../style/OnePage.module.css'
 
@@ -14,9 +16,10 @@ import styles from '../style/OnePage.module.css'
         const booksPerPage = 4;
         
         const { handleSort } = useSort(books, sortOption, sortOrder);
+        const { filteredBooks, filterTags, addFilterTag, removeFilterTag } = useFilter(sortedBooks);
         
         useEffect(() => {
-        setCurrentPage(1); 
+        setCurrentPage(1);
         }, [sortOption, sortOrder]);
         
         useEffect(() => {
@@ -24,7 +27,6 @@ import styles from '../style/OnePage.module.css'
         if (sortedBooksFromStorage) {
         const sorted = sortOrder === 'asc' ? sortedBooksFromStorage : sortedBooksFromStorage.reverse();
         setSortedBooks(sorted);
-        console.log('Sorted books:', sorted);
         } else {
         setSortedBooks(books);
         }
@@ -35,7 +37,7 @@ import styles from '../style/OnePage.module.css'
         
         const indexOfLastBook = currentPage * booksPerPage;
         const indexOfFirstBook = indexOfLastBook - booksPerPage;
-        const currentBooks = sortedBooks.slice(indexOfFirstBook, indexOfLastBook);
+        const currentBooks = filteredBooks.slice(indexOfFirstBook, indexOfLastBook);
         
         const paginate = (pageNumber) => setCurrentPage(pageNumber);
         
@@ -48,12 +50,13 @@ import styles from '../style/OnePage.module.css'
         setSortOption(option);
         setSortOrder('asc');
         }
+        };
         
-        const sortedBooksFromStorage = JSON.parse(sessionStorage.getItem('sortedBooks'));
-        if (sortedBooksFromStorage) {
-        const sorted = sortOrder === 'asc' ? sortedBooksFromStorage : sortedBooksFromStorage.reverse();
-        setSortedBooks(sorted);
-        console.log('Sorted books after sort option change:', sorted);
+        const handleTagClick = (tag) => {
+        if (filterTags.includes(tag)) {
+        removeFilterTag(tag);
+        } else {
+        addFilterTag(tag);
         }
         };
         
@@ -61,10 +64,17 @@ import styles from '../style/OnePage.module.css'
         <div className={styles.main}>
         <div className={styles.headingDiv2}>
         <Filter sortOption={sortOption} sortOrder={sortOrder} handleSort={handleSortOption} />
+        <FilterTags filterTags={filterTags} addFilterTag={addFilterTag} removeFilterTag={removeFilterTag} />
         </div>
         
         <div className={styles.storeBooks}>
-        {currentBooks.map((book, index) => (
+        {currentBooks.map((book, index) => {
+        if (!book.date || !book.price || !book.author || !book.tags) {
+        console.error(`Book at index ${index} is missing the "date" field:`, book);
+        return null;
+        }
+        
+        return (
         <div key={book.title + index} className={styles.bookTitle}>
         <div className={styles.bookInfo}>
         <h2>{indexOfFirstBook + index + 1} {book.title}</h2>
@@ -74,18 +84,23 @@ import styles from '../style/OnePage.module.css'
         <div className={styles.line}></div>
         <div className={styles.tags}>
         {book.tags.map((tag, tagIndex) => (
-        <div key={`${book.title}-${tagIndex}`} className={styles.tag}>
+        <div
+        key={`${book.title}-${tagIndex}`}
+        className={styles.tag}
+        onClick={() => handleTagClick(tag)}
+        >
         {tag}
         </div>
         ))}
         </div>
         </div>
-        ))}
+        );
+        })}
         <div className={styles.total}>
         <h2>Total: {totalPagePrice}$</h2>
         </div>
         <div className={styles.pagination}>
-        {Array.from({ length: Math.ceil(sortedBooks.length / booksPerPage) }, (_, i) => (
+        {Array.from({ length: Math.ceil(filteredBooks.length / booksPerPage) }, (_, i) => (
         <button key={i} onClick={() => paginate(i + 1)} className={styles.pageButton}>
         {i + 1}
         </button>
